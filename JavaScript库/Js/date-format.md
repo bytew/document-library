@@ -2,7 +2,7 @@
 ===
 
 > Create by **bytewang** on **2019/5/15 15:07:43**  
-> Recently revised in **2019/5/15 15:07:48**
+> Recently revised in **2019/5/15 16:44:19**
 
 
 <br>
@@ -29,8 +29,8 @@
 
 例如：
 
-		let do_date = "2019-05-14 10:10:54"     
-		let time = this.getFormatTime(do_date."hh:mm")  //10:10    yyyy-MM-dd hh:mm:ss   
+	let do_date = "2019-05-14 10:10:54"     
+	let time = this.getFormatTime(do_date."hh:mm")  //10:10    yyyy-MM-dd hh:mm:ss   
 
 
 
@@ -74,8 +74,8 @@
 
 例如：
 
-		let do_date = new Date() // "Wed May 01 2019 00:00:00 GMT+0800 (中国标准时间)"     
-		let date = this.getFormatDate(do_date)  //2019-05-14
+	let do_date = new Date() // "Wed May 01 2019 00:00:00 GMT+0800 (中国标准时间)"     
+	let date = this.getFormatDate(do_date)  //2019-05-14
 
 
 ## 3.本年
@@ -89,30 +89,30 @@
 
 例如：
 
-		let dateRange = this.getThisYear() //默认本年
-		let begin_date = this.getFormatDate(dateRange[0])  //2019-01-01
-		let end_date = this.getFormatDate(dateRange[1])  //2019-12-31
+	let dateRange = this.getThisYear() //默认本年
+	let begin_date = this.getFormatDate(dateRange[0])  //2019-01-01
+	let end_date = this.getFormatDate(dateRange[1])  //2019-12-31
 
 
 
 ## 4.本月（可以指定月份）
 
-		let getCurrentMonth = function (date) {
-		    var d = date||new Date();
-		    var start = new Date(d.getFullYear(), d.getMonth(), 1);
-		    var end = new Date(d.getFullYear(), d.getMonth() + 1, 0);
-		    return [start, end];
-		};
+	let getCurrentMonth = function (date) {
+		var d = date||new Date();
+		var start = new Date(d.getFullYear(), d.getMonth(), 1);
+		var end = new Date(d.getFullYear(), d.getMonth() + 1, 0);
+		return [start, end];
+	};
 
 例如：
 
-		let dateRange = this.getCurrentMonth() //默认当前月份
-		let begin_date = this.getFormatDate(dateRange[0])  //2019-05-01
-		let end_date = this.getFormatDate(dateRange[1])  //2019-05-31
+	let dateRange = this.getCurrentMonth() //默认当前月份
+	let begin_date = this.getFormatDate(dateRange[0])  //2019-05-01
+	let end_date = this.getFormatDate(dateRange[1])  //2019-05-31
 
-		let dateRange = this.getCurrentMonth(new Date("2018-08-08"))  //指定时间
-		let begin_date = this.getFormatDate(dateRange[0])  //2018-08-01
-		let end_date = this.getFormatDate(dateRange[1])  //2018-08-31  
+	let dateRange = this.getCurrentMonth(new Date("2018-08-08"))  //指定时间
+	let begin_date = this.getFormatDate(dateRange[0])  //2018-08-01
+	let end_date = this.getFormatDate(dateRange[1])  //2018-08-31  
 
 
 ## 5.上月
@@ -164,9 +164,9 @@
 
 例如：
 
-		let dateRange = this.getCurrentWeek() //默认本周
-		let begin_date = this.getFormatDate(dateRange[0])  //2019-05-13
-		let end_date = this.getFormatDate(dateRange[1])  //2019-05-19
+	let dateRange = this.getCurrentWeek() //默认本周
+	let begin_date = this.getFormatDate(dateRange[0])  //2019-05-13
+	let end_date = this.getFormatDate(dateRange[1])  //2019-05-19
 
 ## 8.上周
 	let getPreWeek = function () {
