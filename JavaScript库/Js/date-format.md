@@ -56,7 +56,7 @@
 	    Month = day.getMonth() + 1;
 	    Day = day.getDate();
 	
-		    CurrentDate += Year + "-";
+		CurrentDate += Year + "-";
 	    if (Month >= 10) {
 	        CurrentDate += Month + "-";
 	    } else {
@@ -173,7 +173,5 @@
 	    var current = this.getCurrentWeek();
 	    var start = current[0];
 	    var end = current[1];
-		var start_date = new Date(start.getFullYear(), start.getMonth(), start.getDate() - 7)
-		var end_date = new Date(end.getFullYear(), end.getMonth(), end.getDate() - 7)
-	    return [start_date, end_date];
+	    return [new Date(start.getFullYear(), start.getMonth(), start.getDate() - 7), new Date(end.getFullYear(), end.getMonth(), end.getDate() - 7)];
 	};
