@@ -173,5 +173,7 @@
 	    var current = this.getCurrentWeek();
 	    var start = current[0];
 	    var end = current[1];
-	    return [new Date(start.getFullYear(), start.getMonth(), start.getDate() - 7), new Date(end.getFullYear(), end.getMonth(), end.getDate() - 7)];
+		var start_date = new Date(start.getFullYear(), start.getMonth(), start.getDate() - 7)
+		var end_date = new Date(end.getFullYear(), end.getMonth(), end.getDate() - 7)
+	    return [start_date, end_date];
 	};
